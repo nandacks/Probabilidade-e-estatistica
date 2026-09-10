@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("\n|------------------------|\n");
-    printf("|------ Questão XX ------|\n");
-    printf("|------------------------|\n\n");
+    printf("|------ Questão4 ------|\n");
 
     int total_amostras = 10000; // quantidade para teste
     int quebradas = 0;

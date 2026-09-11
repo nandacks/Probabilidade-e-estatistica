@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("Considere um cojunto de 4 numeros dos quais nenhum deles é zero, dois sã positivos e dois são negativos. Sorteamos ao acaso, com reposição, 2 numeros desse conjunto. Determine a probabilidade de:\n");
-    printf("a) Um deles ser negativo?\n");
-    printf("b) O quociente entre eles ser negativo?\n");
-    printf("c) Os dois números terem o mesmo sinal?\n");
+    printf("Considere um cojunto de 4 numeros dos quais nenhum deles e zero, dois sao positivos e dois sao negativos. Sorteamos ao acaso, com reposicao, 2 numeros desse conjunto. Determine a probabilidade de: a.) Um deles ser negativo. b.) O quociente entre eles ser negativo. c.) Os dois numeros terem o mesmo sinal.\n");
 
-    // Conjunto de 4 números: 2 positivos e 2 negativos
+    // Conjunto de 4 números (2 positivos e 2 negativos)
     int conjunto[] = {1, 2, -1, -2};
     int total_elementos = 4;
 
@@ -15,7 +12,7 @@ int main() {
     int sucessos_b = 0;
     int sucessos_c = 0;
 
-    // Dois loops simulam o sorteio de 2 números COM reposição
+    // dois loops simulam o sorteio de 2 números COM reposição
     for (int i = 0; i < total_elementos; i++) {
         for (int j = 0; j < total_elementos; j++) {
             total_possibilidades++;
@@ -23,19 +20,19 @@ int main() {
             int n1 = conjunto[i];
             int n2 = conjunto[j];
 
-            // Item a) Exatamente um deles ser negativo
+            // A) Exatamente um deles ser negativo
             if ((n1 < 0 && n2 > 0) || (n1 > 0 && n2 < 0)) {
                 sucessos_a++;
             }
 
-            // Item b) O quociente (divisão n1 / n2) ser negativo
-            // A divisão só é negativa se um for positivo e o outro negativo
+            // B) O quociente (divisão n1 / n2) ser negativo
+            // a divisão só é negativa se um for positivo e o outro negativo
             if (((float)n1 / (float)n2) < 0) {
                 sucessos_b++;
             }
 
-            // Item c) Os dois números terem o mesmo sinal
-            // Ambos positivos OU ambos negativos
+            // C) Os dois números terem o mesmo sinal
+            // ambos positivos OU ambos negativos
             if ((n1 > 0 && n2 > 0) || (n1 < 0 && n2 < 0)) {
                 sucessos_c++;
             }

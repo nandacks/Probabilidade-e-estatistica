@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("|------ Questão4 ------|\n");
+    printf("Amostras de vidrarias de laboratorio sao embaladas em pacotes pequenos e leves ou em pacotes grandes e pesados. Suponha que 2% e 1% da amostra despachada em pequenos e grandes pacotes, respectivamente, quebrem durante o transporte. Se 60% das amostras forem despachadas em grandes pacotes e 40% forem despachadas em pequenos pacotes, qual sera aproporcao de amostras que quebrarao durante o transporte?\n");
 
     int total_amostras = 10000; // quantidade para teste
     int quebradas = 0;
@@ -20,7 +20,7 @@ int main() {
         }
     }
 
-    // pacotes grandes (a cada 100) ---
+    // pacotes grandes (a cada 100) 
     int contador_grandes = 0;
     for (int i = 1; i <= grandes; i++) {
         contador_grandes++;
@@ -31,7 +31,6 @@ int main() {
     }
 
     float proporcao = (float)quebradas / (float)total_amostras;
-
     printf("Proporção de amostras quebradas: %.2f%%\n", proporcao * 100);
 
     return 0;

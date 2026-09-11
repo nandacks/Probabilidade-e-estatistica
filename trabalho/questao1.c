@@ -15,7 +15,7 @@ int main() {
         }
     }
 
-    float probabilidade = (float)sucessos / total_possibilidades;
+    float probabilidade = (float)sucessos / (float) total_possibilidades;
 
     printf("Probabilidade: %.2f%%\n", probabilidade * 100);
 
